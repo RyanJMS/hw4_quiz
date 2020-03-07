@@ -1,4 +1,11 @@
-.body #main {
-  padding: 20px;
-  background-color: black;
+#intro .hide {
+  display: none;
+}
+
+#quiz .hide {
+  display: none;
+}
+
+#quizEnd .hide {
+  display: none;
 }

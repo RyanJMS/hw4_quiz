@@ -13,25 +13,46 @@
     <link rel="stylesheet" type="text/style" href="style.css" />
   </head>
   <body>
-    <main>
-      <a class="justify-content-start" href="highschore.html" id="viewScore"
-        >View Highscores</a
-      >
-      <p class="justify-content-end float-right">
-        Time: <span id="time">75</span>
-      </p>
 
-      <div class="container mx-auto h-50% w-50% p-3 text-black text-center" id="intro">
-            <h1>Coding Quiz Challenge</h1>
-            <p class="text-align-center p-3">This is a quiz about coding. Try to set the high-score by answering the 
+    <nav class="navbar bg-success">
+      <button class="text-white mb-0 btn" id="viewHighScore">View High Scores</button>
+      <div class="text-white">Time: <span class="text-White" id="spanTime">75</span></div>
+    </nav>
+
+      <div class="container mx-auto h-50% w-50% p-3 text-black text-center">
+      <section id="intro" class = "hide">
+        
+        <h1>Coding Quiz Challenge</h1>
+            
+        <p class="text-align-center p-3">This is a quiz about coding (HTML, CSS, Javascript). Try to set the high-score by answering the 
                 most amount of questions correctly, before the time runs out. But beware,
-                every wrong answer will deduct 5 seconds from your timer. Ready?
+                every wrong answer will deduct 10 seconds from your timer. Ready?
                 Click the button to start! Good luck!
             </p>
-            <div class="btn text-align-center bg-info text-white" id="start">Start Quiz!</div>
+               <button class="btn text-align-center bg-info text-white" id="start">Start Quiz!</button>
+          
+            </section>
+
+            <section id="quiz" class="hide">
+              <h2 id="showQuestion"></h2>
+              <div id="choices">
+
+              </div>
+               
+            </section>
+
+            <section id="quizEnd" class = "hide">
+              <h1>Quiz Complete!</h1>
+              <p>Score: <span id="score"></span></p>
+              <br>
+              <p>Enter initials: </p><input id="initials" type="text"> <button id="submit">Submit</button>
+              <button id="reset">Go Back</button>
+            </section>
+       
           </div>
         </div>
       </div>
-    </main>
+      <script src="script.js"></script>
+      <script src="highscores.js"></script>
   </body>
 </html>
