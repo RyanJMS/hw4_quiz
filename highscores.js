@@ -14,6 +14,6 @@ highScores.forEach(function(score) {
 });
 
 clearHighScore.addEventListener("click", function() {
-  localStorage.removeItem("highscores");
+  localStorage.removeItem("highScores");
   window.location.reload();
 });

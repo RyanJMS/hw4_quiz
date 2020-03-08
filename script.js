@@ -40,6 +40,7 @@ let displayTimeEl = document.getElementById("spanTime");
 let introEl = document.getElementById("intro");
 let quizEl = document.getElementById("quiz");
 let quizEndEl = document.getElementById("quizEnd");
+let scoreEl = document.getElementById("score");
 
 let questionTitleEl = document.getElementById("showQuestion");
 let choicesEl = document.getElementById("choices");
@@ -109,6 +110,7 @@ function endQuiz() {
   introEl.style.display = "none";
   quizEl.style.display = "none";
   quizEndEl.style.display = "block";
+  scoreEl.innerHTML = score;
 }
 
 function saveHighScore() {
@@ -116,7 +118,7 @@ function saveHighScore() {
   let highScores = JSON.parse(window.localStorage.getItem("highScores")) || [];
   let currentScore = {
     score: score,
-    intials: initials
+    initials: initials
   };
   highScores.push(currentScore);
   window.localStorage.setItem("highScores", JSON.stringify(highScores));
