@@ -8,7 +8,7 @@ const questions = [
   },
 
   {
-    question: "In CSS, how do we add a media query?",
+    question: "In CSS, how do you add a media query?",
     choices: ["$media", ".media", "#media", "@media"],
     answer: "@media"
   },
@@ -18,7 +18,8 @@ const questions = [
     answer: "alerts"
   },
   {
-    question: "Which of the following is NOT a way to define a variable?",
+    question:
+      "Which of the following is NOT a way to define a variable in javascript?",
     choices: ["var", "int", "let", "const"],
     answer: "int"
   }
@@ -115,14 +116,19 @@ function endQuiz() {
 
 function saveHighScore() {
   let initials = document.getElementById("initials").value;
+
   let highScores = JSON.parse(window.localStorage.getItem("highScores")) || [];
   let currentScore = {
     score: score,
     initials: initials
   };
-  highScores.push(currentScore);
-  window.localStorage.setItem("highScores", JSON.stringify(highScores));
-  window.location.href = "highscore.html";
+  if (initials === "") {
+    alert("Please enter initials!");
+  } else {
+    highScores.push(currentScore);
+    window.localStorage.setItem("highScores", JSON.stringify(highScores));
+    window.location.href = "highscore.html";
+  }
 }
 
 function highScore() {
