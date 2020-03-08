@@ -1,6 +1,6 @@
 # Code Quiz
 
-## This is the 4th homework assignment for Carleton University's coding boot camp. It is a Code Quiz based on javascript, HTML, and CSS. Built with HTML ... CSS ... and Javascript
+ This is the 4th homework assignment for Carleton University's coding boot camp. It is a Code Quiz based on javascript, HTML, and CSS. Built with HTML ... CSS ... and Javascript
 
 Intro Screen
 ![](images/screen1.png)
